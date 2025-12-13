@@ -1,52 +1,91 @@
-# Fullstack Fashion E-commerce
+# Urbn Way — Streetwear E‑commerce
 
-Questo progetto è un e-commerce di moda sviluppato come progetto finale. Permette agli utenti di navigare tra prodotti, aggiungere articoli al carrello e completare acquisti. Include sia il frontend che il backend, offrendo funzionalità moderne e una user experience intuitiva.
-
-## Funzionalità principali
-
-- Visualizzazione dei prodotti di moda
-- Ricerca e filtraggio per categorie
-- Aggiunta e rimozione articoli dal carrello
-- Registrazione e login utenti
-- Gestione ordini
-
-## Installazione
-
-1. **Clona il repository:**
-   ```bash
-   git clone https://github.com/raff-E12/fullstack-project-final.git
-   cd fullstack-project-final
-   ```
-
-2. **Installa le dipendenze per frontend e backend:**
-   ```bash
-   # Per il backend
-   cd backend
-   npm install
-
-   # Per il frontend
-   cd ../frontend
-   npm install
-   ```
-
-3. **Configura le variabili ambiente**  
-   Crea un file `.env` in `backend` e `frontend` secondo gli esempi forniti (`.env.example` se presente).
-
-4. **Avvia il backend:**
-   ```bash
-   cd backend
-   npm start
-   ```
-
-5. **Avvia il frontend:**
-   ```bash
-   cd ../frontend
-   npm start
-   ```
-
-6. **Apri il browser:**  
-   Vai su [http://localhost:3000](http://localhost:3000) per accedere al frontend dell’ecommerce.
+Urbn Way is a full-stack streetwear e-commerce application developed as the final group project of a Full Stack Web Development course. The app allows users to browse and filter products stored in a database, manage favorites and cart, register, complete a checkout flow, and subscribe to a mailing list.
 
 ---
 
-Per domande o problemi, apri una issue su GitHub.
+## Key Features
+
+- Product catalog with categories, search and filters
+- Product detail pages with variants (sizes)
+- Wishlist and shopping cart management
+- User registration and checkout flow
+- Order creation and email subscription
+
+---
+
+## Tech Stack
+
+- Frontend
+  - React 19.0.0
+  - Vite 6.2.0
+  - React Router DOM 7 (for routing and navigation)
+  - UI libraries: Swiper for carousels, Bootstrap Icons
+  - EmailJS for contact / mailing-list integration
+  - Axios for API requests
+
+- Backend
+  - Node.js + Express
+  - MySQL (mysql2) as relational database
+  - Utility libs: slugify, validator, cors
+
+---
+
+## How to run locally
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/willymariino/fullstack-project-final
+   cd fullstack-project-final
+   ```
+
+2. Backend setup
+
+   ```bash
+   cd ecommerce-express
+   npm install
+   ```
+
+   Create a `.env` file with the required database credentials and environment variables.
+
+3. Start the backend server
+
+   ```bash
+   npm run dev
+   ```
+
+4. Frontend setup
+
+   ```bash
+   cd ../ecommerce-react
+   npm install
+   npm run dev
+   ```
+
+5. Open the application at the address provided by Vite.
+
+---
+
+## Team 
+
+This project was a group final project completed over multiple weeks with milestone-based progress and periodic presentations to two instructors acting as project managers. At the end of each milestone the team presented progress; after the final milestone the team presented the completed project illustrating features and operation.
+
+Team members
+- [Willy Mariino](https://github.com/willymariino)
+- [Marco Vacchi](https://github.com/MarcoVacchi)
+- [Andrea Catapano](https://github.com/AndreaCatapano)
+- [Martino Lanza](https://github.com/martinolanza03)
+- [Simone Burrai](https://github.com/simoneburrai)
+- [Raffaele Coppola](https://github.com/raff-E12)
+
+---
+
+## How we worked
+
+- Project split into weekly milestones with clear deliverables 
+- At the end of each milestone the team demonstrated the current state to two instructors who acted as project managers and provided feedback.
+- Iterative improvements and bug fixes between milestones until the final presentation.
+
+---
+
+
