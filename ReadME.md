@@ -4,6 +4,10 @@
 
 Urbn Way is a full-stack streetwear e-commerce application developed as the final group project of a Full Stack Web Development course. The app allows users to browse and filter products stored in a database, manage favorites and cart, register, complete a checkout flow, and subscribe to a mailing list.
 
+>  **Backend note**
+> The backend API is deployed to Render. Render services enter sleep mode after 15 minutes of inactivity; when the API is cold, expect a 20–30 second delay for the first request while the service wakes up.
+
+
 ---
 
 ## Key Features
