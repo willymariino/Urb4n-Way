@@ -116,7 +116,7 @@ const CheckoutForm = ({
       });
   };
 
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -126,7 +126,7 @@ const CheckoutForm = ({
     setIsSubmitting(true);
 
     try {
-      sendConfirmationEmail();
+      //  sendConfirmationEmail();
 
       // **Prepare the 'items' array for the backend**
       const formattedCartItems = cartItems.map((item) => ({
