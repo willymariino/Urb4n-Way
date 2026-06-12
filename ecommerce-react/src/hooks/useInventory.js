@@ -15,7 +15,7 @@ export const useInventory = () => {
       }));
 
       const response = await axios.post(
-        "http://localhost:3000/api/availability/check-cart",
+        `${import.meta.env.VITE_API_URL}/api/availability/check-cart`,
         { items }
       );
 
@@ -45,8 +45,8 @@ export const useInventory = () => {
 
       // The orderData object already contains 'items' and all other customer/order details
       const response = await axios.post(
-        "http://localhost:3000/api/availability/process-order",
-        orderData // <--- SEND THE WHOLE orderData OBJECT DIRECTLY
+        `${import.meta.env.VITE_API_URL}/api/availability/process-order`,
+        orderData
       );
 
       return response.data;

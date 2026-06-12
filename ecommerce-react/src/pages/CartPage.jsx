@@ -19,7 +19,7 @@ export default function CartPage() {
   const [appliedPromoPercentage, setAppliedPromoPercentage] = useState(0);
   const [promoMessage, setPromoMessage] = useState("");
 
-  const endPointDiscount = "http://localhost:3000/checkout/discount-code";
+  const endPointDiscount = `${import.meta.env.VITE_API_URL}/checkout/discount-code`;
 
   // Stati per OrderConfirmationModal
   const [showOrderConfirmation, setShowOrderConfirmation] = useState(false);
@@ -269,9 +269,8 @@ export default function CartPage() {
                 return (
                   <div key={`${item.id}_${item.selectedSize}`}>
                     <div
-                      className={`cart-item ${
-                        availabilityIssue ? "unavailable" : ""
-                      }`}
+                      className={`cart-item ${availabilityIssue ? "unavailable" : ""
+                        }`}
                     >
                       <div className="row align-items-center">
                         <div className="col-md-3 col-4">
@@ -456,9 +455,8 @@ export default function CartPage() {
 
                         {promoMessage && (
                           <small
-                            className={`discount-message ${
-                              validPromo ? "discount-success" : "discount-error"
-                            }`}
+                            className={`discount-message ${validPromo ? "discount-success" : "discount-error"
+                              }`}
                           >
                             {promoMessage}
                           </small>
@@ -469,9 +467,8 @@ export default function CartPage() {
                     <div className="checkout-btn-wrapper">
                       <button
                         onClick={handleProceedToCheckout}
-                        className={`btn checkout-btn ${
-                          !availabilityStatus.allAvailable ? "unavailable" : ""
-                        } ${isCheckingAvailability ? "checking" : ""}`}
+                        className={`btn checkout-btn ${!availabilityStatus.allAvailable ? "unavailable" : ""
+                          } ${isCheckingAvailability ? "checking" : ""}`}
                         disabled={
                           !availabilityStatus.allAvailable ||
                           isCheckingAvailability

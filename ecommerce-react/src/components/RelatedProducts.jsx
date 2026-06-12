@@ -7,7 +7,7 @@ const RelatedProducts = ({ category_slug }) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/products/category/${category_slug}`)
+            .get(`${import.meta.env.VITE_API_URL}/products/category/${category_slug}`)
             .then((res) => {
                 setRelatedProducts(res.data.products.splice(0, 6))
             })

@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import FilterSection from "../components/FilterSection.jsx";
 import ProductCard from "../components/ProductCard.jsx"; // Import del nuovo componente
-import {useSearch} from "../context/SearchContext.jsx"
+import { useSearch } from "../context/SearchContext.jsx"
 import axios from "axios";
 
 import "../style/ProductsPage.css";
 
 export default function ProductPage() {
-  const {searchTerm, searchSubmitted} = useSearch();
+  const { searchTerm, searchSubmitted } = useSearch();
   const [products, setProducts] = useState([]);
   const [defaultProducts, setDefaultProducts] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
   const location = useLocation();
-  const endPoint = "http://localhost:3000/products";
+  const endPoint = `${import.meta.env.VITE_API_URL}/products`;
 
   const buildApiParams = () => {
     const queryParams = new URLSearchParams(location.search);
@@ -47,7 +47,7 @@ export default function ProductPage() {
         console.error("Errore nel recupero dei prodotti:", err);
         setProducts([]);
       })
-      .finally(()=>setLoading(false))
+      .finally(() => setLoading(false))
   }
 
   function getdefaultProducts() {
@@ -103,9 +103,9 @@ export default function ProductPage() {
           )}
         </div>
       </div>
-    </div> 
+    </div>
     : <div className="text-center m-5">
       <h2>Caricamento Prodotti in Corso...</h2>
-      </div>
+    </div>
   )
 }

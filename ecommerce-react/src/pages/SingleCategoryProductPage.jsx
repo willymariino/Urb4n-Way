@@ -9,8 +9,7 @@ export default function SingleCategoryProductPage() {
   const [products, setProducts] = useState([]);
 
   function getProducts() {
-    const endPoint = `http://localhost:3000/products/category/${categorySlug}`;
-    axios
+    const endPoint = `${import.meta.env.VITE_API_URL}/products/category/${categorySlug}`; axios
       .get(endPoint)
       .then((res) => {
         setProducts(res.data.products);

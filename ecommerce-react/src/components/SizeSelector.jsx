@@ -21,7 +21,7 @@ const SizeSelector = ({
         setError(null);
 
         const response = await axios.get(
-          `http://localhost:3000/api/availability/product/${productId}/availability`
+          `${import.meta.env.VITE_API_URL}/api/availability/product/${productId}/availability`
         );
 
         if (response.data.success) {
@@ -93,13 +93,12 @@ const SizeSelector = ({
           <button
             key={sizeInfo.size}
             type="button"
-            className={`btn size-btn ${
-              selectedSize === sizeInfo.size
+            className={`btn size-btn ${selectedSize === sizeInfo.size
                 ? "btn-primary"
                 : sizeInfo.available
-                ? "btn-outline-primary"
-                : `btn-outline-secondary ${getOutOfStockClass()}`
-            }`}
+                  ? "btn-outline-primary"
+                  : `btn-outline-secondary ${getOutOfStockClass()}`
+              }`}
             onClick={() => handleSizeClick(sizeInfo.size, sizeInfo.available)}
             disabled={!sizeInfo.available || disabled}
             title={

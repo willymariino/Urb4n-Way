@@ -10,7 +10,7 @@ export function HomeProductSection() {
   const [bestSellers, setBestSellers] = useState([]);
   const [isBestSellerSection, setBestSellerSection] = useState(true);
 
-  const endPoint = "http://localhost:3000/";
+  const endPoint = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     axios
