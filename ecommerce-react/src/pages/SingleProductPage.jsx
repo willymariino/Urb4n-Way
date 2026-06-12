@@ -11,7 +11,7 @@ export default function SingleProductPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
-  const endPoint = `http://127.0.0.1:3000/products/${slug}`;
+  const endPoint = `${import.meta.env.VITE_API_URL}/products/${slug}`;
   const [productSlug, setProductSlug] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -238,22 +238,22 @@ export default function SingleProductPage() {
                 className="carousel slide shadow-lg rounded overflow-hidden"
               >
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img
-                        src={image_url}
-                        className="d-block w-100 product-main-image"
-                        alt={name}
-                        style={{ height: "500px", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={image_still_life_url}
-                        className="d-block w-100 product-main-image"
-                        alt={name}
-                        style={{ height: "500px", objectFit: "cover" }}
-                      />
-                    </div>
+                  <div className="carousel-item active">
+                    <img
+                      src={image_url}
+                      className="d-block w-100 product-main-image"
+                      alt={name}
+                      style={{ height: "500px", objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src={image_still_life_url}
+                      className="d-block w-100 product-main-image"
+                      alt={name}
+                      style={{ height: "500px", objectFit: "cover" }}
+                    />
+                  </div>
                 </div>
                 <button
                   className="carousel-control-prev"
