@@ -15,7 +15,7 @@ const availabilityRoute = require("./routers/availabilityRouter");
 //adding cors path localhost 5173 (ognuno cambi il suo nel file .env)
 app.use(
   cors({
-    origin: process.env.FE_APP,
+    origin: [process.env.FE_APP, "http://localhost:5173"],
     credentials: true,
   })
 );
