@@ -1,4 +1,6 @@
 # Urbn Way — Streetwear E‑commerce
+[![Live Demo](https://img.shields.io/badge/live-demo-brightgreen)](https://urb4n-way.netlify.app/)
+
 
 Urbn Way is a full-stack streetwear e-commerce application developed as the final group project of a Full Stack Web Development course. The app allows users to browse and filter products stored in a database, manage favorites and cart, register, complete a checkout flow, and subscribe to a mailing list.
 
@@ -30,6 +32,9 @@ Urbn Way is a full-stack streetwear e-commerce application developed as the fina
   - Utility libs: slugify, validator, cors
 
 ---
+
+## Live Demo
+[Urb4n Way](https://urb4n-way.netlify.app)
 
 ## How to run locally
 
